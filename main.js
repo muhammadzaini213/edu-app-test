@@ -276,7 +276,7 @@ function isPotrait() {
       button.textContent = data.name;
       button.className = 'mt-10 px-6 py-3 bg-blue-900 text-white rounded-lg hover:bg-blue-700 font-bold';
       button.addEventListener('click', () => {
-        startAnimation('card-chooser-potrait', 'popups')
+        startAnimation('card-chooser-potrait', 'refresh-popup')
         gateAnimation();
 
         setTimeout(() => {
@@ -295,7 +295,7 @@ function isPotrait() {
 
       document.getElementById('arrow-left-exit-card').addEventListener('click', () => {
         gateAnimation();
-        startAnimation('card-chooser-potrait', 'popups')
+        startAnimation('card-chooser-potrait', 'refresh-popup')
         document.getElementById('arrow-left-exit-card').classList.add('hidden');
 
         setTimeout(() => {
