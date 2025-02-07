@@ -1,0 +1,115 @@
+body {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+h1 {
+    font-family: 'Fredoka One', sans-serif;
+
+}
+
+@font-face {
+    font-family: 'Fredoka One';
+    src: URL('fredoka.ttf') format('truetype');
+}
+  
+
+@media (orientation: portrait) {
+    body {
+        overflow-y: auto;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@keyframes top-left-gate-opening {
+    from {
+        opacity: 0.3;
+        transform: translateX(-150%);
+        transform: translateY(-50%);
+        -webkit-transform: translateX(-150%);
+        -moz-transform: translateX(-150%);
+        -ms-transform: translateX(-150%);
+        -o-transform: translateX(-150%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-80%);
+        transform: translateY(0);
+        -webkit-transform: translateX(-80%);
+        -moz-transform: translateX(-80%);
+        -ms-transform: translateX(-80%);
+        -o-transform: translateX(-80%);
+    }
+}
+
+@keyframes bottom-right-gate-opening {
+    from {
+        opacity: 0.3;
+        transform: translateX(150%);
+        transform: translateY(50%);
+        -webkit-transform: translateX(150%);
+        -moz-transform: translateX(150%);
+        -ms-transform: translateX(150%);
+        -o-transform: translateX(150%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(90%);
+        transform: translateY(0);
+        -webkit-transform: translateX(90%);
+        -moz-transform: translateX(90%);
+        -ms-transform: translateX(90%);
+        -o-transform: translateX(90%);
+    }
+}
+
+
+
+@keyframes slide-logo-up {
+    from {
+        opacity: 0.3;
+        transform: translateY(50%);
+        -webkit-transform: translateY(50%);
+        -moz-transform: translateY(50%);
+        -ms-transform: translateY(50%);
+        -o-transform: translateY(50%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+}
+
+.animated-top-left-gate-opening {
+    clip-path: polygon(75% 0, 100% 0, 25% 100%, 0% 100%);
+    height: 100vh;
+    top: 0;
+    left: 0;
+    width: 90%;
+    animation: top-left-gate-opening 1s ease-in-out forwards;
+    -webkit-animation: top-left-gate-opening 1s ease-in-out forwards;
+}
+
+.animated-bottom-right-gate-opening {
+    clip-path: polygon(75% 0, 100% 0, 25% 100%, 0% 100%);
+    height: 100vh;
+    top: 0;
+    left: 0;
+    width: 90%;
+    animation: bottom-right-gate-opening 1s ease-in-out forwards;
+    -webkit-animation: bottom-right-gate-opening 1s ease-in-out forwards;
+}
+
+.animated-logo {
+    animation: slide-logo-up 1s ease-in-out forwards;
+    -webkit-animation: slide-logo-up 1s ease-in-out forwards;
+}

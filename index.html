@@ -4,123 +4,163 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Basement</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <title>SELAMAT DATANG DI INFORMATIKA</title>
 
+  <link rel="stylesheet" href="styles/gate.css">
+  <link rel="stylesheet" href="styles/opening.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/tailwind.css">
+</head>
 
 <body class="relative min-h-screen bg-white flex items-center justify-center">
 
-  <div id="gate-left" class="fixed bg-blue-900 animated-box-left z-40"></div>
-  <div id="gate-right" class="fixed bg-blue-900 animated-box-right z-40"></div>
-
-  <div id="welcome-logo" class="z-10 text-center animated-logo">
-    <img src="logo_IF.png" alt="Logo" class="mx-auto w-64 h-auto mb-6">
-    <h1 class="mt-10 text-4xl font-bold text-black-900 pointer-events-none">Selamat Datang di Informatika ITK</h1>
-    <button class="mt-10 px-6 py-3 bg-blue-900 text-white font-bold underline rounded-lg hover:bg-blue-700"
-      id="explore-btn">Let's Go!</button>
-  </div>
 
 
-  <div class="absolute bottom-0 right-0 mr-10 mb-5 fade-in z-50">
-    <img id="arrow-right" src="ic-arrow-right.png" alt="Right" class="w-16 h-16 rounded-full hover:bg-blue-700 hidden">
-  </div>
-
-  <div class="absolute top-0 left-0 ml-10 mt-5 fade-in z-50">
-    <img id="arrow-left" src="ic-arrow-left.png" alt="Left" class="w-16 h-16 rounded-full hover:bg-blue-700 hidden">
-  </div>
-
-  <div class="absolute top-0 left-0 ml-10 mt-5 fade-in z-50">
-    <img id="arrow-left-card-open" src="ic-arrow-left.png" alt="Left"
-      class="w-16 h-16 rounded-full hover:bg-blue-700 hidden">
-  </div>
-
-  <div class="absolute bottom-0 right-0 mr-10 mb-5 fade-in z-50">
-    <img id="arrow-right-card-open" src="ic-arrow-right.png" alt="Right" class="w-16 h-16 rounded-full hover:bg-blue-700 hidden">
-  </div>
 
 
-  
-  <div class="absolute top-0 left-0 m-2 fade-in z-50">
-    <img id="arrow-left-exit-card" src="ic-arrow-left.png" alt="Left"
-      class="w-8 h-8 rounded-full hover:bg-blue-700 hidden">
-  </div>
 
-  <div id="card-chooser" class="hidden pt-4">
-    <div id="card-choose">
-      <div class="absolute left-1/2 -translate-x-1/2 mt-10">
-        <h1 class="mt-4 px-4 py-2 text-4xl font-bold text-black pointer-events-none">
+
+  <div id="oh" class="hidden z-0">
+    <div id="gate-top-left" class="fixed bg-blue-900 animated-top-left-gate-opening z-40"></div>
+    <div id="gate-bottom-left" class="fixed bg-blue-900 hidden"></div>
+    <div id="gate-top-right" class="fixed bg-blue-900 hidden"></div>
+    <div id="gate-bottom-right" class="fixed bg-blue-900 animated-bottom-right-gate-opening z-40"></div>
+
+    <section id="welcome-section" class="z-10 text-center animated-logo">
+      <img src="assets/logo_IF.png" alt="Logo" class="mx-auto w-64 h-auto mb-6">
+      <h1 class="mt-10 text-4xl font-bold text-black-900 pointer-events-none">Selamat Datang di Informatika ITK</h1>
+      <button class="mt-10 px-6 py-3 bg-blue-900 text-white font-bold underline rounded-lg hover:bg-blue-700"
+        id="explore-btn">Let's Go!</button>
+    </section>
+    <div id="arrow-container" class="absolute top-0 left-0 w-full h-screen z-50 pointer-events-none">
+      <div class="absolute top-0 left-0 ml-10 mt-5 z-50">
+        <img id="arrow-left" src="assets/ic-arrow-left.png" alt="Left"
+          class="w-16 h-16 rounded-full hover:bg-blue-700 hidden pointer-events-auto">
+      </div>
+
+      <div class="absolute bottom-0 right-0 mr-10 mb-5 z-50">
+        <img id="arrow-right" src="assets/ic-arrow-right.png" alt="Right"
+          class="w-16 h-16 rounded-full hover:bg-blue-700 hidden pointer-events-auto">
+      </div>
+
+      <div class="absolute top-0 left-0 ml-10 mt-5 z-50">
+        <img id="arrow-left-card-open" src="assets/ic-arrow-left.png" alt="Left"
+          class="w-16 h-16 rounded-full hover:bg-blue-700 hidden pointer-events-auto">
+      </div>
+
+      <div class="absolute bottom-0 right-0 mr-10 mb-5 z-50">
+        <img id="arrow-right-card-open" src="assets/ic-arrow-right.png" alt="Right"
+          class="w-16 h-16 rounded-full hover:bg-blue-700 hidden pointer-events-auto">
+      </div>
+
+      <div class="absolute top-0 left-0 m-2 z-50">
+        <img id="arrow-left-exit-card" src="assets/ic-arrow-left.png" alt="Left"
+          class="w-8 h-8 rounded-full hover:bg-blue-700 hidden pointer-events-auto">
+      </div>
+    </div>
+
+    <div id="main-section" class="hidden pt-4 w-full">
+      <div id="choose-topic">
+        <div class="absolute left-1/2 -translate-x-1/2 mt-10">
+          <h1 class="mt-4 px-4 py-2 text-4xl font-bold text-black pointer-events-none">
+            Pilih Minatmu
+          </h1>
+        </div>
+
+        <div class="flex min-h-screen items-center justify-center z-10">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div id="card-1-container" class="p-8 w-80 h-96 rounded-2xl  text-center bg-white">
+              <img id="img-card-1" class="mx-auto mb-10 w-40 h-40 rounded-lg">
+              <button id="btn-card-1"
+                class="mt-10 px-6 py-3 bg-blue-900 text-white rounded-lg hover:bg-blue-700 font-bold">
+              </button>
+            </div>
+
+            <div id="card-2-container" class="p-8 w-80 h-96 rounded-2xl  text-center bg-white">
+              <img id="img-card-2" class="mx-auto mb-10 w-40 h-40 rounded-lg">
+              <button id="btn-card-2"
+                class="mt-10 px-6 py-3 bg-blue-900 text-white rounded-lg hover:bg-blue-700 font-bold">
+              </button>
+            </div>
+
+            <div id="card-3-container" class="p-8 w-80 h-96 rounded-2xl text-center bg-white">
+              <img id="img-card-3" class="mx-auto mb-10 w-40 h-40 rounded-lg">
+              <button id="btn-card-3"
+                class="mt-10 px-6 py-3 bg-blue-900 text-white rounded-lg hover:bg-blue-700 font-bold">
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="card-open"
+        class="hidden flex flex-col md:flex-row items-center justify-center p-8 rounded-2xl w-full pop-in min-h-[300px]">
+        <div class="flex md:w-3/4 items-center justify-between gap-x-5">
+          <!-- Text Content -->
+          <div>
+            <h1 id="item-title" class="text-4xl font-bold text-black-900 pointer-events-none">ss</h1>
+            <p id="item-desc" class="mt-4 text-lg font-bold text-gray-700 pointer-events-none">ss</p>
+          </div>
+
+          <!-- Image -->
+          <div class="flex-shrink-0">
+            <img id="item-img" src="assets/ic-ai.png" class="w-48">
+          </div>
+        </div>
+      </div>
+
+
+      <div id="choose-subject"
+        class="hidden flex flex-col md:flex-row justify-center items-center bg-white rounded-2xl w-4/5 h-3/5 pop-in mx-auto overflow-y-hidden">
+        <div class="w-full flex flex-col items-center">
+          <h1 id="item-title-subject" class="text-4xl font-bold text-black-900 pointer-events-none mb-10">
+            Astronomi
+          </h1>
+
+          <div id="subject-container"
+            class="w-4/5 flex flex-col items-center gap-y-5 max-h-64 overflow-y-auto p-4 inline-block">
+          </div>
+
+        </div>
+        <div class="w-1/4 flex-shrink-0 ml-5 mr-10">
+          <img id="item-img-subject" src="assets/ic-ai.png" class="w-80 h-80 object-contain rounded-lg">
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+      <div id="choose-material" class="hidden"></div>
+      <div id="material" class="hidden"></div>
+    </div>
+
+    <section id="main-section-potrait" class="hidden text-center pt-4 pop-in">
+
+      <div id="choose-menu">
+        <h1 class="mt-16 px-4 py-2 text-4xl font-bold text-black pointer-events-none">
           Pilih Minatmu
         </h1>
-      </div>
 
-      <div class="flex min-h-screen items-center justify-center z-0">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Card 1 -->
-          <div id="card-1-container" class="p-8 w-80 h-96 rounded-2xl  text-center bg-white">
-            <img id="img-card-1" class="mx-auto mb-10 w-40 h-40 rounded-lg">
-            <button id="btn-card-1"
-              class="mt-10 px-6 py-3 bg-blue-900 text-white rounded-lg hover:bg-blue-700 font-bold">
-            </button>
-          </div>
-
-          <div id="card-2-container" class="p-8 w-80 h-96 rounded-2xl  text-center bg-white">
-            <img id="img-card-2" class="mx-auto mb-10 w-40 h-40 rounded-lg">
-            <button id="btn-card-2"
-              class="mt-10 px-6 py-3 bg-blue-900 text-white rounded-lg hover:bg-blue-700 font-bold">
-            </button>
-          </div>
-
-          <div id="card-3-container" class="p-8 w-80 h-96 rounded-2xl text-center bg-white">
-            <img id="img-card-3" class="mx-auto mb-10 w-40 h-40 rounded-lg">
-            <button id="btn-card-3"
-              class="mt-10 px-6 py-3 bg-blue-900 text-white rounded-lg hover:bg-blue-700 font-bold">
-            </button>
+        <div class="mt-16 flex items-center justify-center">
+          <div id="card-container" class="grid grid-cols-1 gap-8">
           </div>
         </div>
       </div>
-    </div>
-    
-    <div id="card-open" class="hidden flex flex-col mt-0 md:flex-row items-center bg-white p-8 rounded-2xl max-w-5xl pop-in">
-      <!-- Text Section -->
-      <div class="md:w-3/4">
-        <h1 id="item-title" class="text-4xl font-bold text-black-900 pointer-events-none">
-        </h1>
-        <p id="item-desc" class="mt-4 text-lg font-bold text-gray-700 pointer-events-none">
-        </p>
-    </div>
 
-    <div class="ml-10 w-1/4">
-      <img id="item-img" class="w-64">
-    </div>
-    </div>
-
-  </div>
-
-
-
-  <div id="card-chooser-potrait" class="hidden text-center pt-4 pop-in">
-
-    <div id="choose-menu">
-      <h1 class="mt-16 px-4 py-2 text-4xl font-bold text-black pointer-events-none">
-        Pilih Minatmu
-      </h1>
-
-      <div class="mt-16 flex items-center justify-center">
-        <div id="card-container" class="grid grid-cols-1 gap-8">
-          <!-- Cards dynamically populated by JS -->
-        </div>
-      </div>
-    </div>
-     
-
-      <div id="card-open-potrait" class="hidden flex flex-col bg-white p-8 rounded-2xl max-w-5xl pop-in items-center space-y-6">
+      <div id="card-open-potrait"
+        class="hidden flex flex-col bg-white p-8 rounded-2xl max-w-5xl pop-in items-center space-y-6">
         <!-- Image Section -->
         <div class="w-full flex justify-center mb-12">
           <img id="item-img-potrait" class="w-32">
         </div>
-      
+
         <!-- Text Section -->
         <div class="text-center">
           <h1 id="item-title-potrait" class="text-2xl font-bold text-black-900 pointer-events-none">
@@ -129,129 +169,111 @@
           </p>
         </div>
       </div>
-      
+
+    </section>
   </div>
 
 
-  <script src="main.js"></script>
 
-    <!-- <div id="prototype-show" class="relative mx-auto flex justify-center items-center hidden">
-    <video id="myVideo" class="absolute top-0 left-0 w-full h-full object-cover opacity-60 z-50" autoplay></video>
-    <canvas id="trackingCanvas" class="absolute w-[80vw] h-[80vh]"></canvas>
+  <script src="scripts/data.js"></script>
+  <script src="scripts/init.js"></script>
+  <script src="scripts/animation.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/main-potrait.js"></script>
+  <script src="scripts/orientation.js"></script>
+
+  <div id="video-container" class="w-full h-full fixed inset-0 z-50 bg-black hidden">
+    <video id="idle-video" class="w-full h-full object-cover" autoplay muted loop>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </div>
-  
-  <script src="https://cdn.jsdelivr.net/npm/handtrackjs/dist/handtrack.min.js"></script> -->
 
-
-<!-- 
   <script>
-    const video = document.getElementById('myVideo');
-    const prototypeShow = document.getElementById('prototype-show');
-    const canvas = document.getElementById('trackingCanvas');
-    const context = canvas.getContext('2d');
-  
-    // Dynamically set the canvas size based on 80% of the viewport width and height
-    canvas.width = window.innerWidth * 0.8;
-    canvas.height = window.innerHeight * 0.8;
-  
-    const modelParams = {
-      flipHorizontal: true,
-      maxNumBoxes: 1,
-      iouThreshold: 0.4,
-      scoreThreshold: 0.4,
-    };
-  
-    let model;
-  
-    let isActive = false
-    handTrack.load(modelParams).then(lmodel => {
-      model = lmodel;
-      startVideo();
-    });
+    const videoContainer = document.getElementById("video-container");
+    const idleVideo = document.getElementById("idle-video");
+    let idleTimeout;
 
-    function blink () {
-      if (isActive) {
+
+    videoContainer.classList.add('fade-in');
+    videoContainer.classList.remove('hidden');
+
+    let idleDelay = 100000000; // 30 seconds idle delay
+    let isIdleActive = false;
+    // Show video
+    let ishiding = false;
+
+    function showVideo() {
+      if (!videoContainer.classList.contains("fade-in")) {
+        videoContainer.classList.remove("fade-out", "hidden");
+        videoContainer.classList.add("fade-in");
+        idleVideo.currentTime = 0;
+        idleVideo.play();
+        isIdleActive = true;
+        idleDelay = 9999999993000;
 
         setTimeout(() => {
-          gateAnimation();
-          blink();
-        }, 5000);
+          document.getElementById('oh').classList.add('hidden');
+        }, 500);
       }
     }
-  
-    function startVideo() {
-      handTrack.startVideo(video).then(status => {
-        if (status) {
-          navigator.mediaDevices.getUserMedia({ video: {} })
-            .then(stream => {
-              video.srcObject = stream;
-              video.play();
-  
-              // Wait for the video to be ready
-              video.addEventListener('loadeddata', () => {
-                prototypeShow.classList.remove('hidden'); // Show the canvas container
-                runDetection(); // Start detection after the video is ready
-              });
-            })
-            .catch(err => console.error(err));
-        }
-      });
-    }
-  
-    let diamondX = canvas.width / 2;
-    let diamondY = canvas.height / 2;
-    const diamondSize = 100; // Fixed size for the diamond shape
-    let breathProgress = 0; // This will control the up and down movement of the diamond
-  
-    function runDetection() {
-      if (!isActive) {
-        isActive = true;
-        blink();
-      }
-      model.detect(video).then(predictions => {
-        context.clearRect(0, 0, canvas.width, canvas.height); // Clear previous frame
-  
-        console.log('Detection started');
-        console.log('Number of detections:', predictions.length);
-  
-        let targetX = diamondX;
-        let targetY = diamondY;
-  
-        if (predictions.length > 0) {
-          // If there are detections, use the center of the first detection's bounding box
-          const [x, y, width, height] = predictions[0].bbox;
-          console.log('Detection:', predictions[0]);
-  
-          targetX = x + width / 2; // Center of bounding box
-          targetY = y + height / 2; // Center of bounding box
 
-        }
-  
-        // Smooth movement to the target position
-        diamondX += (targetX - diamondX) * 0.1; // Interpolate X position
-        diamondY += (targetY - diamondY) * 0.1; // Interpolate Y position
-  
-        breathProgress += 0.05; // Controls speed of the breathing animation
-        const breathOffset = Math.sin(breathProgress) * 0.5; // Sinusoidal oscillation for breathing effect
-        diamondY += breathOffset; // Add breathing oscillation to Y coordinate
-  
-        context.beginPath();
-        context.moveTo(diamondX, diamondY - 1.5 * diamondSize / 2); // Top vertex
-        context.lineTo(diamondX + diamondSize / 2, diamondY); // Right vertex
-        context.lineTo(diamondX, diamondY + 1.5 * diamondSize / 2); // Bottom vertex
-        context.lineTo(diamondX - diamondSize / 2, diamondY); // Left vertex
-        context.closePath();
-  
-        context.fillStyle = '#0D47A1'; // Tailwind's blue-500 color
-        context.fill();
-        context.lineWidth = 3;
-  
-        requestAnimationFrame(runDetection); // Continue detection
-      }).catch(err => {
-        console.error('Error during detection:', err);
-      });
+    function hideVideo() {
+      if (!videoContainer.classList.contains("fade-out")) {
+        videoContainer.classList.remove("fade-in");
+        // Force browser to recognize the state change
+        void videoContainer.offsetWidth;
+        document.getElementById('oh').classList.remove('hidden');
+        isLandscape();
+        videoContainer.classList.add("fade-out");
+        ishiding = true;
+        idleDelay = 30000;
+
+        setTimeout(() => {
+          ishiding = false;
+          isIdleActive = false;
+          videoContainer.classList.add("hidden");
+          videoContainer.classList.remove("fade-out");
+          idleVideo.pause();
+          idleVideo.currentTime = 0;
+        }, 500);
+      }
     }
-  </script> -->
+
+    // Reset idle timeout
+    function resetIdleTimeout() {
+        clearTimeout(idleTimeout);
+        idleTimeout = setTimeout(reload, idleDelay);
+    }
+
+    function reload() {
+      if(!isIdleActive) {
+        window.location.reload();
+      }
+    }
+    // Show video on spacebar key press
+    window.addEventListener("keydown", (e) => {
+      if (e.code === "Space") {
+        e.preventDefault();
+        reload();
+      }
+    });
+
+    // Hide video on mouse move
+    window.addEventListener("mousemove", () => {
+      if (!videoContainer.classList.contains("hidden")) {
+        hideVideo();
+      }
+      resetIdleTimeout();
+    });
+
+    // Initialize idle timeout detection
+    resetIdleTimeout();
+  </script>
+
+
+
+
 </body>
 
 </html>
